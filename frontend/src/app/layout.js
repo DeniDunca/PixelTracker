@@ -1,5 +1,6 @@
 import { Pixelify_Sans } from "next/font/google";
 import "./globals.css";
+import { PixelProvider } from "./hooks/PixelContext";
 
 const pixelifySans = Pixelify_Sans({
   variable: "--font-pixelify-sans",
@@ -13,7 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${pixelifySans.variable}`}>{children}</body>
+      <PixelProvider>
+        <body className={`${pixelifySans.variable}`}>{children}</body>
+      </PixelProvider>
     </html>
   );
 }

@@ -1,5 +1,6 @@
 import styles from "./pixel.module.css";
 import PixelModal from "./pixelModal";
+import { usePixelStore } from "../hooks/PixelContext";
 
 export default function Pixel({ day, month }) {
   const months = [
@@ -17,11 +18,11 @@ export default function Pixel({ day, month }) {
     "Dec",
   ];
 
+  const { showModal, toggleModal } = usePixelStore();
+
   const pixelSettings = () => {
-      return(
-        <PixelModal/>
-      )
-  }
+    toggleModal();
+  };
 
   if (day === 0 && month === 0) {
     return <div className={styles.pixel}></div>;

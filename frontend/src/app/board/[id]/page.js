@@ -1,23 +1,22 @@
-'use client';
-import { use, useState } from 'react';
+"use client";
+import { use, useState } from "react";
 
 import styles from "./board.module.css";
 
 import Calendar from "../../components/calendar";
 import Color from "../../components/color";
 import Pixel from "../../components/pixel";
+import PixelModal from "../../components/pixelModal";
+import { usePixelStore } from "../../hooks/PixelContext";
 
-export default function Board({params}) {
+export default function Board({ params }) {
   const { id } = use(params);
 
-  const [showPixelDetails, setShowPixelDetails] = useState(true);
+  const { showModal, toggleModal } = usePixelStore();
 
   return (
     <div>
-      {showPixelDetails && <div>
-          hello
-      </div>}
-    
+      {showModal && <PixelModal/>}
       <div className={styles.header}>
         <div className={styles.titleprogress}>
           <h1>Workout tracker</h1>
@@ -33,7 +32,6 @@ export default function Board({params}) {
         <div className={styles.calendarwinner}>
           <Calendar />
         </div>
-
         <div className={styles.settings}>
           <div className={styles.colorCode}>
             <label>Color code:</label>

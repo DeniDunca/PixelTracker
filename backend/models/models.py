@@ -23,7 +23,20 @@ class Pixel(Base):
     id = Column(Integer, primary_key=True, index=True)
     board_id = Column(Integer, ForeignKey("board.id"))
     date= Column(Date)
+    
+class Color(Base):
+    __tablename__ = "color"
+
+    id = Column(Integer, primary_key=True, index=True)
+    board_id = Column(Integer, ForeignKey("board.id"))
     color = Column(String(60))
     description = Column(String(60))
-    
-   
+
+class PixelColor(Base):
+    __tablename__ = "pixel_color"
+
+    id = Column(Integer, primary_key=True, index=True)
+    pixel_id = Column(Integer, ForeignKey("pixel.id"))
+    color_id = Column(Integer, ForeignKey("color.id"))
+
+

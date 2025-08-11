@@ -14,13 +14,10 @@ class BoardDto(BaseModel):
 class PixelDto(BaseModel):
     board_id: int
     date: date
-    color: str
-    description: str
     
 class PixelUpdateDto(BaseModel):
     id: int
     board_id: int
     date: date
-    color: str
-    description: str
+  
     

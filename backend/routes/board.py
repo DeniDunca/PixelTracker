@@ -21,9 +21,9 @@ def get_db():
 
 db_dependency = Annotated[Session, Depends(get_db)]
 
-@router.get("/{user_id}")
-async def get_boards_for_user(db: db_dependency, user_id: str):
-    boards = db.query(Board).filter(Board.user_id == user_id).all()
+@router.get("/{user_id}/")
+async def get_boards_for_user(db: db_dependency, user_id: str, search: str = ""):
+    boards = db.query(Board).filter(Board.user_id == user_id).filter(Board.category.contains(search.strip())).all()
     return boards
 
 @router.post("/create")
