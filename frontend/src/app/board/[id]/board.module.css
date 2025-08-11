@@ -1,0 +1,77 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleprogress {
+  display: flex;
+  align-items: center;
+  gap: 15.5rem;
+  margin-left: 4rem;
+
+  h1 {
+    font-size: 45px;
+    font-family: "Pixelify Sans", sans-serif;
+    color: #40a2c0;
+    padding: 1rem;
+  }
+
+  img {
+    width: 22rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-right: 6rem;
+
+  button {
+    background: url("/button.png");
+    background-size: 150px;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 55px;
+    border: none;
+    font-size: 30px;
+    font-family: "Pixelify Sans", sans-serif;
+    color: #f3fafb;
+  }
+
+  button:hover {
+    background: url("/button-hover.png");
+    background-size: 150px;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 55px;
+    border: none;
+  }
+}
+
+.calendarsettings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 3rem;
+}
+
+.calendarwinner {
+  display: flex;
+  gap: 3rem;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3fafb;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #40a2c0;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.5rem;
+  width: 20%;
+}

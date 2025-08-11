@@ -1,0 +1,19 @@
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 7rem;
+  }
+
+  label {
+    position: absolute;
+    font-size: 45px;
+    font-family: "Pixelify Sans", sans-serif;
+    color: #7768cd;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #09191c;
+  }
+}

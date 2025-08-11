@@ -1,0 +1,46 @@
+.boardWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3fafb;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #40a2c0;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.nameDates {
+  display: flex;
+  gap: 20px;
+}
+
+.boardName {
+  font-size: 35px;
+  font-family: "Pixelify Sans", sans-serif;
+  background-color: #40a2c0;
+  color: #09191c;
+}
+
+.boardDates {
+  display: flex;
+  flex-direction: column;
+  font-size: 35px;
+  font-family: "Pixelify Sans", sans-serif;
+  background-color: #f3fafb;
+  color: #7768cd;
+}
+
+.progress {
+  width: 22rem;
+  padding-top: 2rem;
+}

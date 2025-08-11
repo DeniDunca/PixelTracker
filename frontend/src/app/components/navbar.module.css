@@ -1,0 +1,64 @@
+.navBar {
+  display: flex;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f3fafb;
+}
+
+.searchBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 27rem;
+  }
+
+  input {
+    position: absolute;
+    width: 21rem;
+    margin-left: 4rem;
+    border: none;
+    outline: none;
+    font-size: 35px;
+    font-family: "Pixelify Sans", sans-serif;
+    -webkit-text-fill-color: #09191c !important;
+    background-color: #f3fafb;
+    color: #09191c;
+  }
+}
+
+.halfnavbar {
+  display: flex;
+  gap: 15px;
+}
+
+.theme {
+  background: url("/darkmoon.png");
+  background-repeat: no-repeat;
+  background-size: 70px;
+  border: none;
+  width: 70px;
+  height: 70px;
+}
+
+.theme:hover {
+  background: url("/lightmoon.png");
+  background-repeat: no-repeat;
+  background-size: 70px;
+  border: none;
+  width: 70px;
+  height: 70px;
+}
+
+.profile {
+  background: url("/profile.png");
+  background-repeat: no-repeat;
+  background-size: 70px;
+  border: none;
+  width: 70px;
+  height: 70px;
+}

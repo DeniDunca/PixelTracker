@@ -1,0 +1,22 @@
+body {
+  background-image: url("/background.png");
+  background-size: 1920px 1080px;
+  background-repeat: no-repeat;
+  background-color: #f3fafb;
+  background-position: center;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-position: top;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-image: url("/background.png");
+  }
+}

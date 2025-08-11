@@ -1,0 +1,35 @@
+.title {
+  font-size: 45px;
+  font-family: "Pixelify Sans", sans-serif;
+  color: #40a2c0;
+  padding: 1rem;
+}
+
+.boards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.addboard {
+  position: fixed;
+  top: 80%;
+  left: 90%;
+  background: url("/addboard.png");
+  background-repeat: no-repeat;
+  background-size: 90px;
+  border: none;
+  width: 90px;
+  height: 90px;
+}
+
+.addboard:hover {
+  background: url("/addboard-hover.png");
+  background-repeat: no-repeat;
+  background-size: 90px;
+  border: none;
+  width: 90px;
+  height: 90px;
+}
