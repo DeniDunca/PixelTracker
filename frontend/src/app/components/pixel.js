@@ -1,4 +1,5 @@
 import styles from "./pixel.module.css";
+import PixelModal from "./pixelModal";
 
 export default function Pixel({ day, month }) {
   const months = [
@@ -16,6 +17,12 @@ export default function Pixel({ day, month }) {
     "Dec",
   ];
 
+  const pixelSettings = () => {
+      return(
+        <PixelModal/>
+      )
+  }
+
   if (day === 0 && month === 0) {
     return <div className={styles.pixel}></div>;
   } else if (day === 0) {
@@ -24,5 +31,5 @@ export default function Pixel({ day, month }) {
     return <div className={styles.pixel}>{day}</div>;
   }
 
-  return <div className={styles.pixel}></div>;
+  return <div className={styles.pixel} onClick={pixelSettings}></div>;
 }

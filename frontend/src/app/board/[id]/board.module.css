@@ -55,16 +55,19 @@
   align-items: center;
   justify-content: space-between;
   margin-right: 3rem;
+  gap: 2rem;
+  align-items: flex-start;
 }
 
 .calendarwinner {
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .settings {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   background-color: #f3fafb;
   border-style: solid;
   border-width: 2px;
@@ -74,4 +77,50 @@
   justify-content: center;
   padding: 1.5rem;
   width: 20%;
+}
+
+.colorCode {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  label {
+    font-size: 20px;
+    font-family: "Pixelify Sans", sans-serif;
+    color: #40a2c0;
+    text-align: center;
+  }
+}
+
+.dates {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  label {
+    font-size: 20px;
+    font-family: "Pixelify Sans", sans-serif;
+    color: #40a2c0;
+    text-align: center;
+  }
+
+  input {
+    outline: 0;
+    border-width: 0 0 2px;
+    font-size: 20px;
+    font-family: "Pixelify Sans", sans-serif;
+    background-color: #f3fafb;
+    color: #40a2c0;
+  }
+}
+
+.colorwinner {
+  display: flex;
+  gap: 1rem;
+
+  label {
+    font-size: 20px;
+    font-family: "Pixelify Sans", sans-serif;
+    color: #40a2c0;
+    text-align: center;
+  }
 }

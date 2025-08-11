@@ -4,3 +4,25 @@
   border-width: 2px;
   border-color: #40a2c0;
 }
+
+.calendarmonthly {
+  display: flex;
+  gap: 1rem;
+}
+
+.monthly {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  label {
+    font-size: 19px;
+    font-family: "Pixelify Sans", sans-serif;
+    background-color: #f3fafb;
+    color: #40a2c0;
+    text-align: center;
+    padding: 0.3rem;
+  }
+}

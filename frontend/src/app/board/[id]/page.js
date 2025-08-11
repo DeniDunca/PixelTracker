@@ -1,12 +1,23 @@
-import styles from "./board.module.css";
-import Calendar from "../../components/calendar";
+'use client';
+import { use, useState } from 'react';
 
-export default async function Board(props) {
-  const params = await props.params;
-  const id = params.id;
+import styles from "./board.module.css";
+
+import Calendar from "../../components/calendar";
+import Color from "../../components/color";
+import Pixel from "../../components/pixel";
+
+export default function Board({params}) {
+  const { id } = use(params);
+
+  const [showPixelDetails, setShowPixelDetails] = useState(true);
 
   return (
     <div>
+      {showPixelDetails && <div>
+          hello
+      </div>}
+    
       <div className={styles.header}>
         <div className={styles.titleprogress}>
           <h1>Workout tracker</h1>
@@ -20,18 +31,28 @@ export default async function Board(props) {
 
       <div className={styles.calendarsettings}>
         <div className={styles.calendarwinner}>
-          <div>
-            <Calendar />
-          </div>
-          <div>
-            <lable> Monthly Color Winner</lable>
-          </div>
+          <Calendar />
         </div>
 
         <div className={styles.settings}>
-          <div>Color code</div>
-          <div>start finish date</div>
-          <div>color winner</div>
+          <div className={styles.colorCode}>
+            <label>Color code:</label>
+            <Color />
+            <Color />
+            <Color />
+            <Color />
+            <button>Add more</button>
+          </div>
+          <div className={styles.dates}>
+            <label>Start date:</label>
+            <input />
+            <label>Finish date:</label>
+            <input />
+          </div>
+          <div className={styles.colorwinner}>
+            <label>Color winner:</label>
+            <Pixel />
+          </div>
         </div>
       </div>
     </div>
