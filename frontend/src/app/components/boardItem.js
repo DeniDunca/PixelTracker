@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function BoardItem(params) {
 
-  const { category, startDate, finishDate } = params;
+  const { id, category, startDate, finishDate } = params;
 
   return (
-    <Link href="/pixel/1" className={styles.boardWrapper}>
+    <Link href={`/board/${id}`} className={styles.boardWrapper}>
       <div className={styles.board}>
         <div className={styles.nameDates}>
           <div>

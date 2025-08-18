@@ -10,6 +10,11 @@ class BoardDto(BaseModel):
     category: str
     start_date: date
     finish_date: date
+    
+class BoardDtoUpdate(BaseModel):
+    category: str
+    start_date: date
+    finish_date: date
 
 class PixelDto(BaseModel):
     board_id: int
