@@ -3,3 +3,12 @@ venv/
 .venv/
 env/
 .env/
+
+#py cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VS Code
+.vscode/

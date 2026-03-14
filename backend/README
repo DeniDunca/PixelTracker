@@ -1,0 +1,15 @@
+# Create venv
+
+rm -rf venv
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+# Install libraries
+
+pip install -r requirements.txt
+
+# Run app
+
+fastapi run main.py
