@@ -18,11 +18,16 @@ export default function Pixel({ day, month }) {
     "Dec",
   ];
 
-  const { showModal, toggleModal } = usePixelStore();
+  const { showModal, toggleModal, pixels } = usePixelStore();
 
   const pixelSettings = () => {
     toggleModal();
   };
+
+
+  const pixelId = `${month}-${day}`;
+
+  const pixelColor = pixels[pixelId];
 
   if (day === 0 && month === 0) {
     return <div className={styles.pixel}></div>;
@@ -32,5 +37,11 @@ export default function Pixel({ day, month }) {
     return <div className={styles.pixel}>{day}</div>;
   }
 
-  return <div className={styles.pixel} onClick={pixelSettings}></div>;
+  return <div
+    className={styles.pixel}
+    style={{
+      backgroundColor: pixelColor || "#ffffff"
+    }}
+    onClick={() => toggleModal(pixelId)}
+  />
 }

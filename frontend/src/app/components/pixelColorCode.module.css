@@ -1,0 +1,34 @@
+.pixelWrapper {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #40a2c0;
+  box-sizing: border-box;
+}
+
+.pixel {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.pixel:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Chrome / Safari / Edge */
+.pixel::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.pixel::-webkit-color-swatch {
+  border: none;
+}
+
+/* Firefox */
+.pixel::-moz-color-swatch {
+  border: none;
+}

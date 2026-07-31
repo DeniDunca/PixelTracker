@@ -2,8 +2,23 @@ import styles from "./pixelModal.module.css";
 import { usePixelStore } from "../hooks/PixelContext";
 
 export default function PixelModal() {
-  const { showModal, toggleModal } = usePixelStore();
+  const {
+    colors,
+    setPixels,
+    selectedPixel,
+    toggleModal
+  } = usePixelStore();
 
+  const savePixel = (color) => {
+
+    setPixels(prev => ({
+      ...prev,
+      [selectedPixel]: color
+    }));
+
+    toggleModal();
+
+  };
   return (
     <div className={styles.modalWrapper}>
       <div className={styles.modal}>
@@ -15,9 +30,21 @@ export default function PixelModal() {
           <label>17/08/25</label>
         </div>
         <div className={styles.modalBody}>
-          <div className={styles.pixel}/>
+          <div className={styles.pixel} />
+
           <div className={styles.colors}>
-            <select></select>
+            <div className={styles.palette}>
+              {colors.map((color) => (
+                <button
+                  key={color.id}
+                  className={styles.colorOption}
+                  style={{
+                    backgroundColor: color.value
+                  }}
+                  onClick={() => savePixel(color.value)}
+                />
+              ))}
+            </div>
           </div>
         </div>
         <div className={styles.modalFooter}>

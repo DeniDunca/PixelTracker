@@ -1,12 +1,13 @@
 import styles from "./color.module.css";
-import Pixel from "./pixel";
+import PixelColorCode from "./pixelColorCode";
 
-export default function Color() {
+export default function Color({ color, onChange, onDelete }) {
   return (
     <div className={styles.color}>
-      <Pixel/>
-      <input/>
-      <button>Delete</button>
+      <PixelColorCode color={color} onChange={onChange} />
+      <input placeholder="Pixel name..."/>
+      <button onClick={onDelete} className={styles.colorCodeButton}
+      >Delete</button>
     </div>
   );
 }

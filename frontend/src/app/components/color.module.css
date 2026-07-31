@@ -1,12 +1,45 @@
 .color {
   display: flex;
-  gap: 0.5rem;
-  input {
-    outline: 0;
-    border-width: 0 0 2px;
-    font-size: 20px;
-    font-family: "Pixelify Sans", sans-serif;
-    background-color: #f3fafb;
-    color: #40a2c0;
-  }
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.color input {
+  flex: 1;
+  min-width: 0;
+
+  height: 30px;
+
+  border: none;
+  border-bottom: 2px solid #40a2c0;
+
+  background-color: transparent;
+
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 14px;
+  color: #40a2c0;
+
+  outline: none;
+}
+
+.color input::placeholder {
+  color: #9bbbc3;
+}
+
+.color button {
+  width: 90px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  background-color: #40a2c0;
+  color: #f3fafb;
+
+  border: 1px solid #2c535f;
+
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 13px;
+
+  cursor: pointer;
 }

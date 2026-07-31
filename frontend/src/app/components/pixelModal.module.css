@@ -37,3 +37,21 @@
   text-decoration: none;
   cursor: pointer;
 }
+.palette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.colorOption {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #40a2c0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.colorOption:hover {
+  border-color: #2c535f;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}

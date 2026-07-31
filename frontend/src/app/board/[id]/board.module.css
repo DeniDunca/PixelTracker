@@ -1,126 +1,195 @@
+:root {
+  --primary: #40a2c0;
+  --primary-dark: #2c535f;
+  --primary-hover: #2c8aa5;
+  --background: #f3fafb;
+  --disabled: #b7d4dc;
+  --font: "Pixelify Sans", sans-serif;
+}
+
+/* HEADER */
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 3rem;
 }
 
 .titleprogress {
   display: flex;
   align-items: center;
-  gap: 15.5rem;
-  margin-left: 4rem;
-
-  h1 {
-    font-size: 45px;
-    font-family: "Pixelify Sans", sans-serif;
-    color: #40a2c0;
-    padding: 1rem;
-  }
-
-  img {
-    width: 22rem;
-  }
+  gap: 5rem;
 }
+
+.titleprogress h1 {
+  font-size: 45px;
+  font-family: var(--font);
+  color: var(--primary);
+  padding: 1rem;
+  margin: 0;
+}
+
+.titleprogress img {
+  width: 22rem;
+}
+
+
+/* HEADER BUTTONS */
 
 .buttons {
   display: flex;
-  align-items: center;
   gap: 1rem;
-  margin-right: 2rem;
-
-  button {
-    background: url("/button.png");
-    background-size: 150px;
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 55px;
-    border: none;
-    font-size: 30px;
-    font-family: "Pixelify Sans", sans-serif;
-    color: #f3fafb;
-  }
-
-  button:hover {
-    background: url("/button-hover.png");
-    background-size: 150px;
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 55px;
-    border: none;
-  }
 }
+
+.buttons button {
+  background-image: url("/button.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 150px;
+  height: 55px;
+
+  border: none;
+  background-color: transparent;
+
+  font-size: 25px;
+  font-family: var(--font);
+  color: var(--background);
+
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-image: url("/button-hover.png");
+}
+
+
+/* MAIN LAYOUT */
 
 .calendarsettings {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-right: 3rem;
-  gap: 2rem;
   align-items: flex-start;
+
+  gap: 3rem;
+  padding: 0 3rem;
 }
+
 
 .calendarwinner {
   display: flex;
-  gap: 1rem;
 }
+
+
+/* SETTINGS PANEL */
 
 .settings {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  background-color: #f3fafb;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #40a2c0;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 2rem;
+
+  background-color: #f3fafb;
+  border: 2px solid #40a2c0;
+
   padding: 1.5rem;
-  width: 20%;
+  min-width: 320px;
+  box-sizing: border-box;
 }
+
+
+/* COLOR SECTION */
 
 .colorCode {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  label {
-    font-size: 20px;
-    font-family: "Pixelify Sans", sans-serif;
-    color: #40a2c0;
-    text-align: center;
-  }
+  align-items: center;
+
+  gap: 0.7rem;
 }
+
+.colorCode label,
+.dates label,
+.colorwinner label {
+  font-family: var(--font);
+  font-size: 20px;
+  color: var(--primary);
+}
+
+
+/* DATE INPUTS */
 
 .dates {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
   gap: 1rem;
-
-  label {
-    font-size: 20px;
-    font-family: "Pixelify Sans", sans-serif;
-    color: #40a2c0;
-    text-align: center;
-  }
-
-  input {
-    outline: 0;
-    border-width: 0 0 2px;
-    font-size: 20px;
-    font-family: "Pixelify Sans", sans-serif;
-    background-color: #f3fafb;
-    color: #40a2c0;
-  }
 }
+
+
+.dates input {
+  width: 170px;
+
+  font-family: var(--font);
+  font-size: 18px;
+
+  background: transparent;
+  color: var(--primary);
+
+  border: none;
+  border-bottom: 2px solid var(--primary);
+
+  outline: none;
+}
+
+
+/* COLOR WINNER */
 
 .colorwinner {
   display: flex;
+  align-items: center;
   gap: 1rem;
+}
 
-  label {
-    font-size: 20px;
-    font-family: "Pixelify Sans", sans-serif;
-    color: #40a2c0;
-    text-align: center;
-  }
+
+/* ADD COLOR BUTTON */
+
+.colorCodeButton {
+  width: 90px;
+  height: 30px;
+
+  background-color: var(--primary);
+  color: var(--background);
+
+  border: 1px solid var(--primary-dark);
+
+  font-family: var(--font);
+  font-size: 13px;
+
+  cursor: pointer;
+  padding: 0;
+
+  transition: 0.2s ease;
+}
+
+
+.colorCodeButton:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+
+.colorCodeButton:active {
+  transform: translateY(0);
+}
+
+
+.colorCodeButton:disabled {
+  background-color: var(--disabled);
+  border-color: #9bbbc3;
+
+  cursor: not-allowed;
 }
